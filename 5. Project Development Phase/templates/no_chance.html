@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Safe Conditions</title>
+  <link rel="stylesheet" href="/static/main.css">
+</head>
+<body>
+  <div class="page-shell result-shell result-safe">
+    <div class="result-panel">
+      <span class="eyebrow">Safe Forecast</span>
+      <h1>No Flood Predicted</h1>
+      <p>The system indicates that current weather conditions do not point to an imminent flood risk.</p>
+      <div class="metric-block">
+        <span>Safety confidence</span>
+        <strong>{{ safety }}%</strong>
+      </div>
+      <div class="actions-row">
+        <a href="/predict" class="btn btn-primary">Run Another Prediction</a>
+        <a href="/" class="btn btn-secondary">Return Home</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

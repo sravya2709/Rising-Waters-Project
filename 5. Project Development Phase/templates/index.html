@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flood Prediction Input</title>
+  <link rel="stylesheet" href="/static/main.css">
+</head>
+<body>
+  <div class="page-shell form-shell">
+    <header class="panel-header">
+      <div>
+        <p class="eyebrow">Predictive Input</p>
+        <h1>Enter Current Weather Conditions</h1>
+        <p>Provide the latest measurements to estimate flood risk using the deployed XGBoost model.</p>
+      </div>
+      <a href="/" class="text-link">Back to home</a>
+    </header>
+
+    <form class="predict-form" method="POST" action="/predict" novalidate>
+      {% if error %}
+      <div class="alert alert-danger">{{ error }}</div>
+      {% endif %}
+      <div class="grid-2 form-grid">
+        {% for feature in features %}
+        <label class="form-field">
+          <span>{{ feature.label }}</span>
+          <input type="number" step="any" name="{{ feature.name }}" placeholder="{{ feature.placeholder }}" required>
+        </label>
+        {% endfor %}
+      </div>
+      <div class="form-actions">
+        <button type="submit" class="btn btn-primary">Submit Prediction</button>
+        <button type="reset" class="btn btn-secondary">Reset</button>
+      </div>
+    </form>
+
+    <section class="section panel-gray demo-panel">
+      <div class="section-head">
+        <p class="section-label">Quick demo</p>
+        <h2>Enter details like a new user</h2>
+      </div>
+      <div class="demo-grid">
+        <div class="demo-copy">
+          <h3>Test the system with a real India flood example</h3>
+          <p>Use the sample row below to fill the form quickly. Each field is a standard weather metric from the dataset used to train the model.</p>
+          <ol class="guide-list">
+            <li>Read the field name.</li>
+            <li>Type the matching numeric value from the sample row.</li>
+            <li>Click <strong>Submit Prediction</strong> to see the flood risk result.</li>
+          </ol>
+        </div>
+        <div class="demo-table-panel">
+          <h3>Sample input table</h3>
+          <table class="demo-table">
+            <thead>
+              <tr><th>Field</th><th>Value</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Temp</td><td>28</td></tr>
+              <tr><td>Humidity</td><td>75</td></tr>
+              <tr><td>Cloud Cover</td><td>40</td></tr>
+              <tr><td>ANNUAL</td><td>3326.6</td></tr>
+              <tr><td>Jan-Feb</td><td>9.3</td></tr>
+              <tr><td>Mar-May</td><td>275.7</td></tr>
+              <tr><td>Jun-Sep</td><td>2403.4</td></tr>
+              <tr><td>Oct-Dec</td><td>638.2</td></tr>
+              <tr><td>avgjune</td><td>130.3</td></tr>
+              <tr><td>sub</td><td>256.4</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script src="/static/main.js"></script>
+</body>
+</html>

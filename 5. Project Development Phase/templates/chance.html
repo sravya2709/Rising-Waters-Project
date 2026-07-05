@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flood Risk Alert</title>
+  <link rel="stylesheet" href="/static/main.css">
+</head>
+<body>
+  <div class="page-shell result-shell result-danger">
+    <div class="result-panel">
+      <span class="eyebrow">High Flood Risk</span>
+      <h1>Flood Warning Issued</h1>
+      <p>The model has identified a high probability of flooding based on current weather inputs.</p>
+      <div class="metric-block">
+        <span>Predicted flood probability</span>
+        <strong>{{ risk }}%</strong>
+      </div>
+      <div class="actions-row">
+        <a href="/predict" class="btn btn-primary">Re-run Prediction</a>
+        <a href="/" class="btn btn-secondary">Return Home</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

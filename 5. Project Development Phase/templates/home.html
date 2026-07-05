@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>FloodAware INDIA — Interactive Flood Prediction</title>
+  <link rel="stylesheet" href="/static/main.css">
+</head>
+<body>
+  <div class="page-shell single-page">
+    <nav class="top-nav">
+
+      <div class="brand">RISING WATERS</div>
+      <div class="nav-actions">
+        <button class="btn btn-secondary nav-btn" data-target="awareness">Awareness</button>
+        <button class="btn btn-secondary nav-btn" data-target="demo">Demo</button>
+        <button class="btn btn-primary nav-btn" data-target="prediction">Predict Now</button>
+      </div>
+    </nav>
+
+    <header class="hero-section">
+      <div class="hero-copy">
+        <span class="eyebrow" style="font-size: larger; font-style: oblique;">A Flood Prediction</span>
+        <h1>Interactive flood monitoring and early warning for communities across India</h1>
+        <p>Explore past flood incidents, learn about causes and impacts, and test flood risk predictions with a smooth single-page experience.</p>
+        <div class="hero-actions">
+          <button class="btn btn-primary nav-btn" data-target="prediction">Start Prediction</button>
+          <button class="btn btn-secondary nav-btn" data-target="awareness">Read Stories</button>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-banner">
+          <div class="hero-tag">Featured case</div>
+          <h2>Godavari basin flooding</h2>
+          <p>Heavy rainfall in India can quickly overwhelm river basins. This interface helps translate weather observations into early flood warnings.</p>
+          <div class="hero-stats">
+            <div><strong>120+</strong><span>Villages affected</span></div>
+            <div><strong>25 km</strong><span>Flooded riverbank</span></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="section story-section" id="awareness">
+      <div class="section-head">
+        <p class="section-label">Past Flood Incidents</p>
+        <h2>Past incidents across India with impact visuals</h2>
+      </div>
+      <div class="story-slider">
+        <article class="story-card reveal-card">
+          <div class="story-hero story-hero-1"></div>
+          <h3>Godavari basin 2020</h3>
+          <p>Heavy monsoon rain flooded villages around Rajahmundry, showing how river overflow and stagnant drainage turn weather into disaster.</p>
+          <div class="story-meta"><span>Monsoon surge</span><span>River overflow</span><span>Emergency alert</span></div>
+        </article>
+        <article class="story-card reveal-card">
+          <div class="story-hero story-hero-2"></div>
+          <h3>Visakhapatnam cyclone surge</h3>
+          <p>Storm-driven cloud cover and water level rise hit coastal systems, underscoring the need for reliable prediction dashboards.</p>
+          <div class="story-meta"><span>Coastal flood</span><span>High winds</span><span>Urban risk</span></div>
+        </article>
+        <article class="story-card reveal-card">
+          <div class="story-hero story-hero-3"></div>
+          <h3>Krishna river alert</h3>
+          <p>Rising river levels in Vijayawada create seasonal threats. Predictive analytics helps planners protect people and crops.</p>
+          <div class="story-meta"><span>River rise</span><span>Dam impact</span><span>Agriculture loss</span></div>
+        </article>
+      </div>
+      <div class="media-block reveal-card">
+        <div class="media-copy">
+          <h3>Learn from regional flood signals</h3>
+
+          <p>Each case highlights how rainfall, cloud cover, and seasonal runoff combine to create high-risk flood conditions in these regions.</p>
+        </div>
+        <iframe srcdoc="<style>body{margin:0;font-family:sans-serif;background:#08101d;color:#fff;padding:20px;}h4{margin:0 0 10px;font-size:1rem;}p{margin:0;line-height:1.6;font-size:0.95rem;}</style><h4>AP flood news snapshot</h4><p>Local weather triggers emergency alerts as water levels rise. Interactive prediction tools help communities respond earlier.</p>" title="AP flood news" loading="lazy"></iframe>
+      </div>
+    </section>
+
+    <section class="section awareness-panel reveal-card">
+      <div class="section-head">
+        <p class="section-label">Flood awareness</p>
+        <h2>What causes floods and how they affect communities across India</h2>
+      </div>
+      <div class="grid-3">
+        <article class="feature-card">
+          <h3>Rainfall overload</h3>
+          <p>Intense monsoon and cyclone-driven rain rapidly saturate soil and rivers, making flash flooding more likely.</p>
+        </article>
+        <article class="feature-card">
+          <h3>Community losses</h3>
+          <p>Floods damage homes, roads, crops, and critical infrastructure across rural and urban areas.</p>
+        </article>
+        <article class="feature-card">
+          <h3>Fast response</h3>
+          <p>Timely alerts improve evacuation, resource deployment, and resilience for affected districts across India.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section demo-section" id="demo">
+      <div class="section-head">
+        <p class="section-label">New user demo</p>
+        <h2>How to use the system step by step</h2>
+      </div>
+      <div class="demo-grid reveal-card">
+        <div class="demo-copy">
+          <h3>Simple steps for new users</h3>
+          <ol>
+            <li>Scroll to the prediction section.</li>
+            <li>Enter the sample weather and water values shown in the table.</li>
+            <li>Press <strong>Check Now</strong> and see the live risk chart update.</li>
+          </ol>
+          <p>The system maps each input to a trained model and returns a visual result immediately, so even first-time users can interpret flood risk fast.</p>
+        </div>
+        <div class="demo-table-panel">
+          <h3>Example input values</h3>
+          <table class="demo-table">
+            <thead>
+              <tr><th>Field</th><th>Value</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Temperature</td><td>28</td></tr>
+              <tr><td>Humidity</td><td>75</td></tr>
+              <tr><td>Cloud Cover</td><td>40</td></tr>
+              <tr><td>Annual Rainfall</td><td>3326.6</td></tr>
+              <tr><td>Jan-Feb Rainfall</td><td>9.3</td></tr>
+              <tr><td>Mar-May Rainfall</td><td>275.7</td></tr>
+              <tr><td>Jun-Sep Rainfall</td><td>2403.4</td></tr>
+              <tr><td>Oct-Dec Rainfall</td><td>638.2</td></tr>
+              <tr><td>Avg June Rainfall</td><td>130.3</td></tr>
+              <tr><td>Seasonal Flood Index</td><td>256.4</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section prediction-section" id="prediction">
+      <div class="section-head">
+        <p class="section-label">Flood prediction</p>
+        <h2>Enter current weather and river conditions</h2>
+      </div>
+      <div class="predict-grid">
+        <div class="predict-insight reveal-card">
+          <h3>Live prediction result</h3>
+          <p>Adjust the values and the dashboard will instantly show your safe score, flood risk, and final condition.</p>
+          <div class="charts-grid">
+            <div class="chart-card">
+              <div class="chart-ring" id="riskChart" style="--percent:0; --color:#ff5e6c"></div>
+              <span>Flood risk</span>
+              <strong id="riskValue">0%</strong>
+            </div>
+            <div class="chart-card">
+              <div class="chart-ring" id="safeChart" style="--percent:100; --color:#28c39b"></div>
+              <span>Safe confidence</span>
+              <strong id="safeValue">100%</strong>
+            </div>
+          </div>
+          <div class="status-panel" id="predictionStatus">
+            <span class="status-label">Condition</span>
+            <strong>Awaiting input</strong>
+            <p>Fill in the form to generate an instant assessment with glowing chart visuals.</p>
+          </div>
+        </div>
+
+        <form class="predict-form reveal-card" id="predictionForm">
+          <div class="field-grid">
+            <label>
+              <span>Temperature (°C)</span>
+              <input type="number" step="any" name="Temp" placeholder="28" required>
+            </label>
+            <label>
+              <span>Humidity (%)</span>
+              <input type="number" step="any" name="Humidity" placeholder="75" required>
+            </label>
+            <label>
+              <span>Cloud Cover (%)</span>
+              <input type="number" step="any" name="Cloud Cover" placeholder="40" required>
+            </label>
+            <label>
+              <span>Annual Rainfall (mm)</span>
+              <input type="number" step="any" name="ANNUAL" placeholder="3326.6" required>
+            </label>
+            <label>
+              <span>Jan-Feb Rainfall (mm)</span>
+              <input type="number" step="any" name="Jan-Feb" placeholder="9.3" required>
+            </label>
+            <label>
+              <span>Mar-May Rainfall (mm)</span>
+              <input type="number" step="any" name="Mar-May" placeholder="275.7" required>
+            </label>
+            <label>
+              <span>Jun-Sep Rainfall (mm)</span>
+              <input type="number" step="any" name="Jun-Sep" placeholder="2403.4" required>
+            </label>
+            <label>
+              <span>Oct-Dec Rainfall (mm)</span>
+              <input type="number" step="any" name="Oct-Dec" placeholder="638.2" required>
+            </label>
+            <label>
+              <span>Avg June Rainfall (mm)</span>
+              <input type="number" step="any" name="avgjune" placeholder="130.3" required>
+            </label>
+            <label>
+              <span>Seasonal Flood Index</span>
+              <input type="number" step="any" name="sub" placeholder="256.4" required>
+            </label>
+          </div>
+          <div id="formMessage" class="form-message"></div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Check Now</button>
+            <button type="reset" class="btn btn-secondary">Clear</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer-panel reveal-card">
+      <p>Built for flood awareness across India with real-world context, interactive prediction, and glassmorphism design.</p>
+    </footer>
+  </div>
+  <script src="/static/main.js"></script>
+</body>
+</html>
